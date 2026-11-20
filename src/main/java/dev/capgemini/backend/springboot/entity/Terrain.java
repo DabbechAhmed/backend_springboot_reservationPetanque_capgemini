@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "terrain")
 @Getter
@@ -19,4 +21,7 @@ public class Terrain {
     private Integer quantite;
     private String nom;
     private String description;
+
+    @OneToMany
+    private List<Reservation> reservations;
 }
